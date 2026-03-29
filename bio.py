@@ -34,14 +34,14 @@ async def start_handler(client: Client, message):
     bot = await client.get_me()
     add_url = f"https://t.me/{bot.username}?startgroup=true"
     text = (
-        "**✨ Welcome to BioLink Protector Bot! ✨**\n\n"
-        "🛡️ I help protect your groups from users with links in their bio.\n\n"
-        "**🔹 Key Features:**\n"
-        "   • Automatic URL detection in user bios\n"
-        "   • Customizable warning limit\n"
-        "   • Auto-mute or ban when limit is reached\n"
-        "   • Whitelist management for trusted users\n\n"
-        "**Use /help to see all available commands.**"
+        "**✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʙɪᴏʟɪɴᴋ ᴘʀᴏᴛᴇᴄᴛᴏʀ ʙᴏᴛ! ✨**\n\n"
+        "🛡️ ɪ ʜᴇʟᴘ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ꜰʀᴏᴍ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ʟɪɴᴋꜱ ɪɴ ᴛʜᴇɪʀ ʙɪᴏ.\n\n"
+        "**🔹 ᴋᴇʏ ꜰᴇᴧᴛᴜʀᴇꜱ:**\n"
+        "   • ᴧᴜᴛᴏᴍᴧᴛɪᴄ ᴜʀʟ ᴅᴇᴛᴇᴄᴛɪᴏɴ ɪɴ ᴜꜱᴇʀ ʙɪᴏꜱ\n"
+        "   • ᴄᴜꜱᴛᴏᴍɪᴢᴧʙʟᴇ ᴡᴧʀɴɪɴɢ ʟɪᴍɪᴛ\n"
+        "   • ᴧᴜᴛᴏ-ᴍᴜᴛᴇ ᴏʀ ʙᴧɴ ᴡʜᴇɴ ʟɪᴍɪᴛ ɪꜱ ʀᴇᴧᴄʜᴇᴅ\n"
+        "   • ᴡʜɪᴛᴇʟɪꜱᴛ ᴍᴧɴᴧɢᴇᴍᴇɴᴛ ꜰᴏʀ ᴛʀᴜꜱᴛᴇᴅ ᴜꜱᴇʀꜱ\n\n"
+        "**ᴜꜱᴇ /help ᴛᴏ ꜱᴇᴇ ᴧʟʟ ᴧᴠᴧɪʟᴧʙʟᴇ ᴄᴏᴍᴍᴧɴᴅꜱ.**"
     )
     kb = InlineKeyboardMarkup([
         [InlineKeyboardButton("➕ Add Me to Your Group", url=add_url)],
@@ -56,16 +56,16 @@ async def start_handler(client: Client, message):
 async def help_handler(client: Client, message):
     chat_id = message.chat.id
     help_text = (
-        "**🛠️ Bot Commands & Usage**\n\n"
-        "`/config` – set warn-limit & punishment mode\n"
-        "`/free` – whitelist a user (reply or user/id)\n"
-        "`/unfree` – remove from whitelist\n"
-        "`/freelist` – list all whitelisted users\n\n"
-        "**When someone with a URL in their bio posts, I’ll:**\n"
-        " 1. ⚠️ Warn them\n"
-        " 2. 🔇 Mute if they exceed limit\n"
-        " 3. 🔨 Ban if set to ban\n\n"
-        "**Use the inline buttons on warnings to cancel or whitelist**"
+        "**🛠️ ʙᴏᴛ ᴄᴏᴍᴍᴧɴᴅꜱ & ᴜꜱᴧɢᴇ**\n\n"
+        "`/config` – ꜱᴇᴛ ᴡᴧʀɴ-ʟɪᴍɪᴛ & ᴘᴜɴɪꜱʜᴍᴇɴᴛ ᴍᴏᴅᴇ\n"
+        "`/free` – ᴡʜɪᴛᴇʟɪꜱᴛ ᴧ ᴜꜱᴇʀ (ʀᴇᴘʟʏ ᴏʀ ᴜꜱᴇʀ/ɪᴅ)\n"
+        "`/unfree` – ʀᴇᴍᴏᴠᴇ ꜰʀᴏᴍ ᴡʜɪᴛᴇʟɪꜱᴛ\n"
+        "`/freelist` – ʟɪꜱᴛ ᴧʟʟ ᴡʜɪᴛᴇʟɪꜱᴛᴇᴅ ᴜꜱᴇʀꜱ\n\n"
+        "**ᴡʜᴇɴ ꜱᴏᴍᴇᴏɴᴇ ᴡɪᴛʜ ᴧ ᴜʀʟ ɪɴ ᴛʜᴇɪʀ ʙɪᴏ ᴘᴏꜱᴛꜱ, ɪ’ʟʟ:**\n"
+        " 1. ⚠️ ᴡᴧʀɴ ᴛʜᴇᴍ\n"
+        " 2. 🔇 ᴍᴜᴛᴇ ɪꜰ ᴛʜᴇʏ ᴇxᴄᴇᴇᴅ ʟɪᴍɪᴛ\n"
+        " 3. 🔨 ʙᴧɴ ɪꜰ ꜱᴇᴛ ᴛᴏ ʙᴧɴ\n\n"
+        "**ᴜꜱᴇ ᴛʜᴇ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴꜱ ᴏɴ ᴡᴧʀɴɪɴɢꜱ ᴛᴏ ᴄᴧɴᴄᴇʟ ᴏʀ ᴡʜɪᴛᴇʟɪꜱᴛ**"
     )
     kb = InlineKeyboardMarkup([
         [InlineKeyboardButton("🗑️ Close", callback_data="close")]
@@ -329,7 +329,7 @@ async def check_bio(client: Client, message):
                 "**Notice: Please remove any links from your bio.**"
             )
             keyboard = InlineKeyboardMarkup([
-                [InlineKeyboardButton("❌ Cancel Warning", callback_data=f"cancel_warn_{user_id}"),
+                [InlineKeyboardButton("❌ Cancel Warn", callback_data=f"cancel_warn_{user_id}"),
                  InlineKeyboardButton("✅ Whitelist", callback_data=f"whitelist_{user_id}")],
                 [InlineKeyboardButton("🗑️ Close", callback_data="close")]
             ])
